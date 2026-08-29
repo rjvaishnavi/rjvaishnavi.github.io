@@ -1,0 +1,49 @@
+# ---------------------------------------------------------------
+# SITE SETTINGS — edit the values below to personalize your site
+# ---------------------------------------------------------------
+title: "Vaishnavi Raghavajosyula"
+tagline: "PhD Student in Computer Science"
+description: "Academic homepage of Vaishnavi Raghavajosyula, PhD student in Computer Science."
+
+# IMPORTANT: url is the root of your GitHub Pages site.
+# If your repo is named <username>.github.io, url is "https://<username>.github.io" and baseurl is "".
+# If your repo has any other name (e.g. "academic-site"), url is "https://<username>.github.io"
+# and baseurl is "/academic-site" (note the leading slash, no trailing slash).
+url: "https://rjvaishnavi.github.io"
+baseurl: ""
+
+# Author / profile info shown on the homepage
+author:
+  name: "Vaishnavi Raghavajosyula"
+  title: "PhD Student"
+  affiliation: "Max Planck Institute for Informatics"
+  email: "vraghava@mpi-inf.mpg.de"
+  photo: "/images/image_profile.jpeg"
+
+# Social links — delete or comment out (#) any line you don't want shown.
+social:
+  github: "https://github.com/rjvaishnavi"
+  linkedin: "https://www.linkedin.com/in/vaishnaviraghavajosyula/"
+  orcid: "https://orcid.org/0009-0002-6554-5661"
+  # google_scholar: "https://scholar.google.com/citations?user=XXXXXXX"   # uncomment once I have an account
+  email: "vraghava@mpi-inf.mpg.de"
+
+# ---------------------------------------------------------------
+# BUILD SETTINGS — usually no need to touch these
+# ---------------------------------------------------------------
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+permalink: pretty
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
