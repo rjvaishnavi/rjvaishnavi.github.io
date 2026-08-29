@@ -1,0 +1,13 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-social">
+      {% if site.social.github %}<a href="{{ site.social.github }}" target="_blank" rel="noopener">GitHub</a>{% endif %}
+      {% if site.social.linkedin %}<a href="{{ site.social.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>{% endif %}
+      {% if site.social.orcid %}<a href="{{ site.social.orcid }}" target="_blank" rel="noopener">ORCID</a>{% endif %}
+      {% if site.social.google_scholar %}<a href="{{ site.social.google_scholar }}" target="_blank" rel="noopener">Google Scholar</a>{% endif %}
+      {% if site.social.email %}<a href="mailto:{{ site.social.email }}">Email</a>{% endif %}
+    </div>
+    <p class="footer-copy">&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}. Built with Jekyll &amp; GitHub Pages.</p>
+    <p class="footer-updated">Last updated {{ site.time | date: '%B %-d, %Y' }}</p>
+  </div>
+</footer>

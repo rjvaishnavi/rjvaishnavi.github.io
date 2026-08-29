@@ -1,0 +1,276 @@
+/* -----------------------------------------------------------
+   Academic site — base styles
+   ----------------------------------------------------------- */
+:root {
+  color-scheme: light dark; /* tells the browser this site supports both, for native form/scrollbar theming */
+
+  --color-bg: #ffffff;
+  --color-text: #1c1e21;
+  --color-muted: #57606a;
+  --color-accent: #191970;      /* MidnightBlue — same as LaTeX's urlcolor=MidnightBlue */
+  --color-border: #e5e7eb;
+  --color-header-bg: #ffffff;
+  --color-code-bg: #f6f8fa;
+  --max-width: 960px;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-serif: Georgia, "Times New Roman", serif;
+}
+
+/* Dark mode: automatically follows the OS/browser preference — no toggle needed */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0d1117;
+    --color-text: #e6edf3;
+    --color-muted: #9198a1;
+    --color-accent: #7f9cff;    /* lighter blue — MidnightBlue itself is too dark to read on a dark background */
+    --color-border: #30363d;
+    --color-header-bg: #0d1117;
+    --color-code-bg: #161b22;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+  font-size: 17px;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+a:hover { opacity: 0.75; }
+
+h1, h2, h3 { font-family: var(--font-serif); line-height: 1.25; color: var(--color-accent); }
+h2 { margin-top: 2.2em; border-bottom: 1px solid var(--color-border); padding-bottom: 0.3em; }
+
+/* ---------------- Header / nav ---------------- */
+.site-header {
+  background: var(--color-header-bg);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  height: 60px;
+  padding: 0;
+  position: relative;
+}
+
+.brand {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: clamp(0.8rem, 2.4vw, 1.1rem);
+  color: var(--color-accent);
+  flex: 0 1 auto;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: none;
+}
+.brand:hover { opacity: 0.8; }
+
+.site-nav { flex-shrink: 0; }
+
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.4rem;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav a {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  padding: 0.3rem 0;
+  border-bottom: 2px solid transparent;
+  text-decoration: none;
+}
+.site-nav a:hover,
+.site-nav a.active {
+  color: var(--color-text);
+  border-bottom-color: var(--color-accent);
+  text-decoration: none;
+}
+
+/* mobile nav toggle (pure CSS, no JS required) */
+.nav-toggle { display: none; }
+.nav-toggle-label {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.nav-toggle-label span {
+  width: 24px;
+  height: 2px;
+  background: var(--color-text);
+}
+
+@media (max-width: 900px) {
+  .nav-toggle-label { display: flex; }
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-header-bg);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .site-nav ul {
+    flex-direction: column;
+    gap: 0;
+    padding: 0.5rem 24px 1rem;
+  }
+  .site-nav li { border-top: 1px solid var(--color-border); }
+  .site-nav li:first-child { border-top: none; }
+  .site-nav a { display: block; padding: 0.7rem 0; }
+  .nav-toggle:checked ~ .site-nav { display: block; }
+}
+
+/* ---------------- Content ---------------- */
+.site-content { padding: 2.5rem 0 4rem; min-height: 60vh; }
+.page-title { margin-top: 0; }
+
+/* ---------------- Profile / homepage ---------------- */
+.profile {
+  display: flex;
+  gap: 1.8rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid var(--color-border);
+}
+.profile-text h1 { margin: 0 0 0.2em; }
+.profile-title, .profile-affiliation {
+  margin: 0.1em 0;
+  color: var(--color-muted);
+}
+.profile-social {
+  margin-top: 0.6em;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.profile-social a { text-decoration: none; }
+
+@media (max-width: 560px) {
+  .profile { flex-direction: column; text-align: center; }
+}
+
+/* ---------------- News ---------------- */
+.news-list { list-style: none; padding: 0; margin: 0; }
+.news-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.news-date { color: var(--color-muted); font-variant-numeric: tabular-nums; margin-right: 0.6em; }
+
+/* ---------------- Publications ---------------- */
+.pub-year { margin-top: 2rem; }
+.pub-list { list-style: none; padding: 0; }
+.pub-entry {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.pub-title { font-weight: 600; }
+.pub-authors { color: var(--color-muted); }
+.pub-venue { color: var(--color-muted); margin-bottom: 0.4em; }
+.pub-links { display: flex; gap: 0.9rem; flex-wrap: wrap; align-items: flex-start; margin-top: 0.3em; }
+.pub-links a { font-size: 0.9rem; text-decoration: none; }
+
+details.pub-toggle {
+  width: 100%;
+  margin-top: 0.4em;
+  font-size: 0.92rem;
+}
+details.pub-toggle summary {
+  cursor: pointer;
+  color: var(--color-accent);
+}
+details.pub-toggle p { color: var(--color-text); }
+
+.bibtex-block {
+  background: var(--color-code-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 0.8rem;
+  font-size: 0.82rem;
+  overflow-x: auto;
+  white-space: pre;
+}
+.copy-bibtex {
+  display: inline-block;
+  margin: 0.4em 0;
+  font-size: 0.8rem;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 2px 8px;
+  cursor: pointer;
+  color: var(--color-text);
+}
+.copy-bibtex:hover { border-color: var(--color-accent); }
+
+/* ---------------- Generic entry lists (education, research, teaching, talks, awards) ---------------- */
+.entry-list { list-style: none; padding: 0; }
+.entry {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.entry-title { font-weight: 600; }
+.entry-place { color: var(--color-muted); }
+.entry-dates { color: var(--color-muted); font-size: 0.9rem; float: right; }
+.entry-details { margin-top: 0.3em; }
+
+/* ---------------- Footer ---------------- */
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  padding: 1.6rem 0;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+.footer-social { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.5rem; }
+.footer-social a { text-decoration: none; }
+.footer-copy { margin: 0; }
+.footer-updated { margin: 0.2em 0 0; font-size: 0.85rem; }
+
+/* ---------------- CV embed ---------------- */
+.cv-embed {
+  width: 100%;
+  height: 800px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  margin-top: 1rem;
+}

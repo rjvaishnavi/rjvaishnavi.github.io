@@ -1,0 +1,52 @@
+# One entry per publication. Fields marked optional can be deleted if unused.
+- title: "The Internet's Path MTUs: How Big Can You Go?"
+  authors: "Jonathan Binkle, <b>Vaishnavi Raghavajosyula</b>, Tiago Heinrich, Anja Feldmann, Tobias Fiebig, Johannes Zirngibl"
+  venue: "ACM Internet Measurement Conference (IMC'26)"
+  year: 2026
+  #pdf: "/files/CV.pdf" # Attach here once I get the DOI
+  code: "https://doi.org/10.17617/3.OG3C1L"
+  project: ""
+  #arxiv: "https://arxiv.org/abs/xxxx.xxxxx"
+  abstract: "Efficient network transmission, especially in IPv6 since on-path fragmentation is not possible, depends on selecting the right packet size. The Maximum Transmission Unit (MTU) determines the largest packet size that can traverse a link and the Path MTU (PMTU) determines the size for an end-to-end path without fragmentation. Due to frequent failures in Path MTU Discovery (PMTUD), protocols must fall back to conservative packet sizes to ensure reachability, sacrificing potential throughput. This creates a need for inference based approaches that estimate a suitable path size. Existing PMTU studies are outdated, limited in scope, and rely on indirect MSS inference or PMTUD-dependent signals, offering little insight into where MTU bottlenecks occur along the path. This paper presents a measurement study of PMTUs using RIPE Atlas to characterize their behavior in general, across protocol layers (IPv4/IPv6) and network locations thus covering 76,700 paths across access networks, the Internet core, and web-serving infrastructure. We observe 97 distinct PMTUs, though a small set:[1500 B (80.5%), 1492 B (11.7%), and 1480 B (1.5%)], dominates. PMTU distributions differ across IP versions: while 99% of IPv4 paths support at least 1420 B, IPv6 paths commonly operate at 1280 B. We further show that sub-1500 B PMTUs are primarily located near network edges, while core paths rarely exhibit such constraints. Finally, we measure PMTU vs. Maximum Segment Size (MSS)-inferred PMTU mismatches in 18.5% of paths."
+  # bibtex: |
+  #   @inproceedings{doe2026example,
+  #     title     = {An Example Paper Title Goes Here},
+  #     author    = {Doe, Jane and Coauthor, One and Coauthor, Two},
+  #     booktitle = {Conference or Journal Name},
+  #     year      = {2026}
+  #   }
+- title: "Hybrid deep learning architecture for comprehensive deepfake video facial forgery detection and segmentation"
+  authors: "<b>Vaishnavi Raghavajosyula</b>, Digambar Pawar "
+  venue: "Multimedia Tools and Applications, Springer"
+  year: 2026
+  pdf: "https://link.springer.com/article/10.1007/s11042-026-21320-8"
+  abstract: "The rapid evolution of deepfake generation techniques, particularly through Generative Adversarial Networks (GANs), necessitates advanced models for accurate detection and segmentation of video forgeries for cyber forensics. Vision Transformers (ViTs) enable efficient global context understanding, capturing long-range dependencies in video sequences. Concurrently, the use of Convolutional Neural Networks (CNNs) facilitates feature extraction and hierarchical pattern recognition, allowing the model to discern subtle artifacts indicative of deepfake manipulation. Our approach aims to exploit the unique strengths of each architecture to enhance both the discriminate and spatial representation capabilities crucial for comprehensive forgery analysis. High-Resolution Networks (HRNets) are also employed to capture fine-grained details essential for precise localization of forged regions within the video frames. In this research, we propose a novel hybrid architecture comprising an accurate video pre-processing unit, a primary classifier using a ViT that uses a CNN as a patch extractor, and finally a segmentation unit where the forged area is detected using an adapted HRNet. All sub-units are trained and tested on the benchmark datasets, proving to outperform the current models in terms of accuracy, Area Under the Curve (AUC), and F1 score."
+  bibtex: |
+    @article{raghavajosyula_hybrid,
+      title   = {Hybrid deep learning architecture for comprehensive deepfake video facial forgery detection and segmentation},
+      author  = { Raghavajosyula, V., Pawar, D. },
+      journal = { Multimed Tools Appl 85, 2 },
+      year    = {2026},
+      doi = {https://doi.org/10.1007/s11042-026-21320-8}
+    }
+- title: "Catching Wind in a Net: The Effects of the CrowdStrike Outage on Internet Traffic"
+  authors: "Florian Steurer, <b>Vaishnavi Raghavajosyula</b>, Danny Lachos, Anja Feldmann, Tobias Fiebig"
+  venue: " 9th Network Traffic Measurement and Analysis Conference (TMA)"
+  year: 2025
+  pdf: "https://ieeexplore.ieee.org/document/11096993" # Attach here once I get the DOI
+  #code: "https://doi.org/10.17617/3.OG3C1L"
+  project: ""
+  #arxiv: "https://arxiv.org/abs/xxxx.xxxxx"
+  abstract: "On July 19th, 2024, CrowdStrike rolled out a faulty update for their endpoint protection software, reportedly affecting over eight million Windows devices. The effects were diverse and global. Most notably, workplace infrastructure was disrupted and multiple airlines grounded their airplanes. The outage exhibited unique characteristics, affecting seemingly unrelated services all over the world, while the network continued to work as expected. Considering the widespread effect on IT systems, the outage should have effects on Internet traffic. However, it is not clear how these effects have substantiated. Indeed, the effects of large service outages on global traffic patterns have not been systematically studied. In this paper, we use data from four European ISPs and one IXP to study the effects of the CrowdStrike incident on Internet traffic. Despite the scale of the outage, we find that aggregate network-level metrics fail to capture the outage effectively. However, by correlating DNS traces with flow data, we show considerable effects on the application layer, including secondary effects, such as airline customers checking for flight cancellations. We find that, despite the large scale of the outage, effects on global Internet traffic were geographically and temporally bounded and quickly remediated. Furthermore, our analysis shows that application-level monitoring can be a valuable tool to better understand service-level outages."
+  bibtex: |
+    @inproceedings{11096993,
+      author={Steurer, Florian and Raghavajosyula, Vaishnavi and Lachos, Danny and Feldmann, Anja and Fiebig, Tobias},
+      booktitle={2025 9th Network Traffic Measurement and Analysis Conference (TMA)}, 
+      title={Catching Wind in a Net: The Effects of the CrowdStrike Outage on Internet Traffic}, 
+      year={2025},
+      volume={},
+      number={},
+      pages={1-10},
+      keywords={Measurement;Europe;Telecommunication traffic;Organizations;Traffic control;Software;Internet;Protection;Monitoring;Airline industry;CrowdStrike;Outage;Traffic;Measurement},
+      doi={10.23919/TMA66427.2025.11096993} 
+    }
