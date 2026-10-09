@@ -3,18 +3,29 @@
   authors: "Jonathan Binkle, <b>Vaishnavi Raghavajosyula</b>, Tiago Heinrich, Anja Feldmann, Tobias Fiebig, Johannes Zirngibl"
   venue: "ACM Internet Measurement Conference (IMC'26)"
   year: 2026
-  #pdf: "/files/CV.pdf" # Attach here once I get the DOI
+  pdf: "https://dl.acm.org/doi/10.1145/3777912.3839800" 
   code: "https://doi.org/10.17617/3.OG3C1L"
   project: ""
   #arxiv: "https://arxiv.org/abs/xxxx.xxxxx"
   abstract: "Efficient network transmission, especially in IPv6 since on-path fragmentation is not possible, depends on selecting the right packet size. The Maximum Transmission Unit (MTU) determines the largest packet size that can traverse a link and the Path MTU (PMTU) determines the size for an end-to-end path without fragmentation. Due to frequent failures in Path MTU Discovery (PMTUD), protocols must fall back to conservative packet sizes to ensure reachability, sacrificing potential throughput. This creates a need for inference based approaches that estimate a suitable path size. Existing PMTU studies are outdated, limited in scope, and rely on indirect MSS inference or PMTUD-dependent signals, offering little insight into where MTU bottlenecks occur along the path. This paper presents a measurement study of PMTUs using RIPE Atlas to characterize their behavior in general, across protocol layers (IPv4/IPv6) and network locations thus covering 76,700 paths across access networks, the Internet core, and web-serving infrastructure. We observe 97 distinct PMTUs, though a small set:[1500 B (80.5%), 1492 B (11.7%), and 1480 B (1.5%)], dominates. PMTU distributions differ across IP versions: while 99% of IPv4 paths support at least 1420 B, IPv6 paths commonly operate at 1280 B. We further show that sub-1500 B PMTUs are primarily located near network edges, while core paths rarely exhibit such constraints. Finally, we measure PMTU vs. Maximum Segment Size (MSS)-inferred PMTU mismatches in 18.5% of paths."
-  # bibtex: |
-  #   @inproceedings{doe2026example,
-  #     title     = {An Example Paper Title Goes Here},
-  #     author    = {Doe, Jane and Coauthor, One and Coauthor, Two},
-  #     booktitle = {Conference or Journal Name},
-  #     year      = {2026}
-  #   }
+  bibtex: |
+    @inproceedings{10.1145/3777912.3839800,
+      author = {Binkle, Jonathan and Raghavajosyula, Vaishnavi and Heinrich, Tiago and Feldmann, Anja and Fiebig, Tobias and Zirngibl, Johannes},
+      title = {The Internet's Path MTUs: How Big Can You Go?},
+      year = {2026},
+      isbn = {9798400723278},
+      publisher = {Association for Computing Machinery},
+      address = {New York, NY, USA},
+      url = {https://doi.org/10.1145/3777912.3839800},
+      doi = {10.1145/3777912.3839800},
+      abstract = {Efficient network transmission, especially in IPv6 since on-path fragmentation is not possible, depends on selecting the right packet size. The Maximum Transmission Unit (MTU) determines the largest packet size that can traverse a link and the Path MTU (PMTU) determines the size for an end-to-end path without fragmentation. Due to frequent failures in Path MTU Discovery (PMTUD), protocols must fall back to conservative packet sizes to ensure reachability, sacrificing potential throughput. This creates a need for inference-based approaches that estimate a suitable path size. Existing PMTU studies are outdated, limited in scope, and rely on indirect MSS inference or PMTUD-dependent signals, offering little insight into where MTU bottlenecks occur along the path.This paper presents a measurement study of PMTUs using RIPE Atlas to characterize their behavior in general, across protocol layers (IPv4/IPv6) and network locations thus covering 76,700 paths across access networks, the Internet core, and web-serving infrastructure. We observe 97 distinct PMTUs, though a small set:[1500 B (80.5\%), 1492 B (11.7\%), and 1480 B (1.5\%)], dominates. PMTU distributions differ across IP versions: while 99\% of IPv4 paths support at least 1420 B, IPv6 paths commonly operate at 1280 B. We further show that sub-1500 B PMTUs are primarily located near network edges, while core paths rarely exhibit such constraints. Finally, we measure PMTU vs. Maximum Segment Size (MSS)-inferred PMTU mismatches in 18.5\% of paths.},
+      booktitle = {Proceedings of the 2026 ACM Internet Measurement Conference},
+      pages = {742-760},
+      numpages = {19},
+      keywords = {path MTU, path MTU discovery, RIPE Atlas, measurement},
+      location = {Karlsruhe, Germany},
+      series = {IMC '26}
+    }
 - title: "Hybrid deep learning architecture for comprehensive deepfake video facial forgery detection and segmentation"
   authors: "<b>Vaishnavi Raghavajosyula</b>, Digambar Pawar "
   venue: "Multimedia Tools and Applications, Springer"

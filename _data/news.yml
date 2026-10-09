@@ -2,6 +2,9 @@
 # 5 most recent, and /news/ shows the full list.
 # - date: "2026-08-02"
 #   text: "Our Paper /publications/ accepted at ACM IMC 2026!"
+- date: "2026-10-09"
+  text: >-
+        Presenting <a href="https://dl.acm.org/doi/10.1145/3777912.3839800" target="_blank">our accepted paper</a>  at ACM IMC 2026, Karlsruhe, Germany
 - date: "2026-01-15"
   text: "Giving a Talk at BENOCS GmbH, Berlin"
 - date: "2025-12-08"
